@@ -10,11 +10,11 @@ function MongoUtils() {
 
    
 
-    mu.findMovies = (cbk,query) => {
+    mu.find = (cbk,colName,query) => {
         const client = new MongoClient(uri, { useNewUrlParser: true });
         client.connect(err => {
             if (err) throw err;
-            const collection = client.db(dbName).collection("Movies");
+            const collection = client.db(dbName).collection(colName);
             console.log(query,'QUERY')
             if (query) {
                 collection.find(query).toArray((err, list) => {
