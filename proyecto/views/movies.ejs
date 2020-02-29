@@ -36,16 +36,16 @@
           %>
             
                 <div class="col s2 m4">
-                    <div class="card " id= <%= idCon %> >
+                    <div class="card " >
                         
                         <div class="card-image" >
                             <img class="movie-image" src=<%=movie.poster %> height="100%" width="100%"/>
                                 
-                                <div class="card-title descrip"><%=movie.overview.substring(0,140)%></div>
+                                <span class="card-title descrip" id= <%= idCon %> ><%=movie.overview.substring(0,200) %> ...  </span>
                             
-                            <span class="card-title" id= <%= idTitle %>><%= movie.title%></span>
+                            <span class="card-title movie-title" id= <%= idTitle %>><%= movie.title%></span>
                             <% i+=1;%>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            <a class="btn-floating halfway-fab waves-effect waves-light orange"><i
                                 class="material-icons">add</i></a>
                         </div>
                         

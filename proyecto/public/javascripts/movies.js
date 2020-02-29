@@ -6,10 +6,10 @@ function toogleTitle(card, pDisplay )
     let num= card.id.split('-')[1];
         let idTitle= "title-"+num
         let title= document.getElementById(idTitle);
-        title.style.display=pDisplay;
+        title.style.opacity=pDisplay;
 }
 
-function titles(path, over)
+function titles(path, opa)
 {  
         
         let filtro=path.filter((i)=>{
@@ -18,7 +18,7 @@ function titles(path, over)
         
         let card= filtro[0];
          
-        toogleTitle(card, over);
+        toogleTitle(card, opa);
         
         
     
@@ -27,9 +27,11 @@ function titles(path, over)
 for( var movie of movies)
 {
     movie.onmouseover = (e)=>{
-        titles(e.path,'None')
+        /*titles(e.path,'0');*/
+        toogleTitle(e.target,'0');
     }
     movie.onmouseout = (e)=>{
-        titles(e.path,'block')
+        /*titles(e.path,'1');*/
+        toogleTitle(e.target,'1');
     }
 }
