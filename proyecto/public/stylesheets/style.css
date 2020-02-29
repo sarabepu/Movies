@@ -1,8 +1,36 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  
+position:relative;
+  
 }
 
-a {
-  color: #00B7FF;
+.opaco {
+  opacity: 0;
+  background-color:rgba(200,200,200,0.5);
+position:absolute;
+-webkit-transition: all 400ms ease-out;
+-moz-transition: all 400ms ease-out;
+-o-transition: all 400ms ease-out;
+-ms-transition: all 400ms ease-out;
+transition: all 400ms ease-out;
+}
+.card-image .opaco:hover {
+opacity: 1 ;
+}
+.descrip{
+  opacity: 0;
+}
+
+.descrip:hover{
+  background-color:rgba(34, 29, 29, 0.5);
+  opacity: 1;
+}
+.card{
+  height: 200pt;
+  width: 250pt;
+  background-color: black;
+  
 }

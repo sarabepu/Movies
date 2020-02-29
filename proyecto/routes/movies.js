@@ -5,13 +5,15 @@ const colName ="Movies";
 /* GET users listing. */
 router.get ('/', function(req, res, next) {
   
-  MongoUtils.find((list)=>{
-    res.send(list);
-  }, colName);
+  MongoUtils.find((movies)=>{
+    res.render("movies",{movies});
+
+  }, 
+  colName);
   
 });
-
-router.post ('/', function(req, res, next) {
+/*HACER ESTO*/ 
+router.post ('/comment', function(req, res, next) {
   
   MongoUtils.find((list)=>{
     res.send(list);
